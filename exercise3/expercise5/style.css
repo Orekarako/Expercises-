@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+ /****************************MAIN************************/
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: black;;
+}
+
+body{
+    overflow-x: hidden;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+section {
+    padding: 16px 32px;
+    text-align:center;
+    }
+ /****************************START NAVBAR************************/
+nav {
+    position: sticky;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.13);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 10px 24px;
+}
+
+span .logo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+nav .links ,nav .social {
+    display: flex;
+    justify-content: space-between;
+}
+.links li {
+    padding: 15px 0;
+}
+.links li a {
+    font-weight: 700;
+    padding: 16px 24px;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+.links li a:hover{
+    border: 1px solid rgba(0, 0, 0, 0.527);
+}
+ .social li a {
+    font-size: 1.5rem;
+ }
+
+ .social li {
+    margin-left: 10px;
+ }
+ /****************************Start Todo List Container************************/
+ .todo-list-container{
+    margin-top: 100px;
+ }
+ .todo-list-container div{
+    width: 800px;
+    height: 350px;
+    margin: auto;
+ }
+ .todo-list-container div h2{ 
+    background-color: rgba(0, 0, 0, 0.199);
+    font-size: 2rem;
+    border-radius: 25px 25px 0 0;
+    padding: 10px 0;
+ }
+ .todo-list-container ul {
+    padding: 32px 74px;
+    background-color: rgba(0, 0, 0, 0.425);
+    border-radius: 0 0 25px 25px;
+
+ }
+ .todo-list-container ul li{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.527);
+
+ }
+
+ input[type="date"]{
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.404);
+    box-shadow:inset 2px 2px 10px 2px rgba(0, 0, 0, 0.185);
+    outline: none;
+    border: none;
+ }
+ /****************************Start South-Africa Container************************/
+
+
+.container .boxes {
+    display: flex;
+    justify-content: center;
+    gap: 10px ;
+    flex-wrap:wrap;
+}
+.container .box{
+    width: 24%;
+    min-width: 450px;
+    opacity: 0.8;
+    text-align: center;
+    padding: 24px;
+    background: linear-gradient( rgba(0, 0, 0, 0.295) , rgba(0, 0, 0, 0));
+    border-radius: 25px;
+    transition:all ease 0.5s;
+    overflow: hidden;
+}
+.container .box:hover{
+    opacity: 1;
+    background: linear-gradient( rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0.295));
+
+}
+
+.container h1 {
+margin-bottom: 50px;    
+}
+
+.container .box p {
+margin: auto;
+width: 95%;
+letter-spacing: 1.2px;
+margin-top: 50px;
+font-weight: 500;
+}
+
+.container  .box img {
+    max-width: 380px;
+    max-height: 250px;
+    border-radius: 15px;
+    box-shadow:0 0 4px 1px rgba(24, 16, 16, 0.753);
+}
+ /****************************Start footer************************/
+
+.footer {
+    color: rgba(255, 255, 255, 0.452);
+    font-size: 1.3rem;
+    align-items:end;
+    border-radius: 10px;
+    width:20rem;
+    margin-right: 30px;
+    padding: 24px 48px;
+    height: 150px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.158);
+}
+footer {
+    position: sticky;
+    bottom: 0;
+    display:flex;
+    justify-content: end;
+}
+.footer::placeholder{
+    font-size: 1.3rem;
+    color: #fff;
+}

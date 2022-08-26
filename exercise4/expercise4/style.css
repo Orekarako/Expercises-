@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/*-------------------------Main---------------*/
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  background: url(./img/background.jpg);
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  height: 150vh;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+/*--------------------- Header--- ---------------*/
+header {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  background-image: url(./img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.205);
+}
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+header .logo i {
+  -webkit-animation: flip;
+          animation: flip;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  font-size: 16px;
+}
+header ul.links {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+}
+header ul.links :nth-child(1) {
+  -webkit-animation-name: shows;
+          animation-name: shows;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+header ul.links :nth-child(2) {
+  -webkit-animation-name: shows;
+          animation-name: shows;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+header ul.links :nth-child(3) {
+  -webkit-animation-name: shows;
+          animation-name: shows;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+header ul.links :nth-child(4) {
+  -webkit-animation-name: shows;
+          animation-name: shows;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+header ul.links li {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+header ul.links li a {
+  padding: 10px 20px;
+  transition: background-color 0.5s;
+  border-radius: 25px 5px 25px 5px;
+}
+header ul.links li :hover {
+  border: 1px solid black;
+  background-color: rgba(250, 249, 248, 0.534);
+}
+header ul.links li :active {
+  border-radius: 10px 25px 10px 25px;
+}
+header div.collapse {
+  display: none;
+}
+header div.collapse label {
+  border: 1px solid black;
+  padding: 10px 18px;
+  border-radius: 25px 5px 25px 5px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  color: wheat;
+  background-color: rgba(226, 94, 94, 0.151);
+  transition: transform ease 0.1s;
+}
+header div.collapse label:hover {
+  background-color: rgba(200, 243, 9, 0.616);
+}
+header div.collapse label:active {
+  border-radius: 10px 25px 10px 25px;
+}
+header ul.social {
+  display: flex;
+  align-items: center;
+}
+header ul.social li {
+  padding: 5px;
+  font-size: 24px;
+}
+header ul.social li:hover {
+  transform: scale(1.2);
+}
+
+/*--------------------- Section I--- ---------------*/
+section.india-section {
+  padding-top: 50px;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+}
+section.india-section h1 {
+  width: 55%;
+  margin: 50px auto;
+  padding: 25px 10px;
+  font-size: 32px;
+  -webkit-animation: background 10s infinite;
+          animation: background 10s infinite;
+}
+section.india-section div.boxes {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Rubik Distressed", cursive;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+section.india-section div.boxes div.box {
+  max-width: 500px;
+  overflow: hidden;
+  height: 280px;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+section.india-section div.boxes div.box:hover {
+  height: 350px;
+  transform: rotateX(25deg);
+  transform: scale(0.9);
+}
+section.india-section div.boxes div.box img {
+  max-width: 500px;
+  border: rgba(0, 0, 0, 0.521) solid 1px;
+  border-radius: 15px;
+  box-shadow: -1px 25px 20px -24px rgba(0, 0, 0, 0.68);
+}
+section.india-section div.boxes div.box h3 {
+  margin-top: 10px;
+  width: 90%;
+  margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    height: 70px;
+  }
+  header ul.social {
+    display: none;
+  }
+  header ul.links {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.144);
+    padding: 16px 0;
+    border-radius: 20px;
+    margin-top: 30px;
+    flex-basis: 100%;
+  }
+  header input:checked ~ ul.links {
+    display: flex;
+  }
+  header div.collapse {
+    display: block;
+  }
+}
+@-webkit-keyframes background {
+  0% {
+    color: #000;
+  }
+  50% {
+    color: rgb(10, 95, 67);
+    transform: scale(1.2);
+  }
+  100% {
+    color: #000;
+  }
+}
+@keyframes background {
+  0% {
+    color: #000;
+  }
+  50% {
+    color: rgb(10, 95, 67);
+    transform: scale(1.2);
+  }
+  100% {
+    color: #000;
+  }
+}
+@-webkit-keyframes flip {
+  0% {
+    transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+  }
+  50% {
+    transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+  }
+  100% {
+    transform: scale(1) rotate3d(-1, 1, 0, -180deg);
+  }
+}
+@keyframes flip {
+  0% {
+    transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+  }
+  50% {
+    transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+  }
+  100% {
+    transform: scale(1) rotate3d(-1, 1, 0, -180deg);
+  }
+}
+@-webkit-keyframes shows {
+  0% {
+    transform: translateX();
+  }
+  50% {
+    transform: translateX(25px);
+  }
+  100% {
+    transform: translateX();
+  }
+}
+@keyframes shows {
+  0% {
+    transform: translateX();
+  }
+  50% {
+    transform: translateX(25px);
+  }
+  100% {
+    transform: translateX();
+  }
+}/*# sourceMappingURL=style.css.map */
