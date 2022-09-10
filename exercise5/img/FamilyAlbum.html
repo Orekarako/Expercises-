@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ==============Link cdn Font awesome================= -->
+    <link rel="stylesheet" href="./FamilyAlbum_files/all.min.css">
+
+    <!-- ==============Link Font Google================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./FamilyAlbum_files/css2" rel="stylesheet">
+
+    <!-- ==============Link Style css================= -->
+    <link rel="stylesheet" href="./FamilyAlbum_files/style.css">
+
+    <title>FamilyAlbum</title>
+</head>
+
+<body>
+    <header>
+
+        <a href="http://127.0.0.1:5500/index.html" class="logo"><i class="fas fa-draw-polygon"></i></a>
+
+        <div class="collapse">
+            <label for="checkbox"><i class="fas fa-bars"></i></label>
+        </div>
+
+        <nav>
+
+            <input type="checkbox" id="checkbox">
+            <ul class="navbar">
+                <li class="nav-list"><a href="http://127.0.0.1:5500/" class="nav-link">Home</a></li>
+                <li class="nav-list"><a href="http://127.0.0.1:5500/" class="nav-link">About</a></li>
+                <li class="nav-list"><a href="http://127.0.0.1:5500/" class="nav-link">contact</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="social">
+                <li><a href="http://127.0.0.1:5500/#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="http://127.0.0.1:5500/#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="http://127.0.0.1:5500/#"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <section class="section-gallery">
+        <div class="background"></div>
+        <h1 class="titleGallery" style="
+    height: 0px;
+">My Beautiful Family</h1>
+        <div class="cards">
+            <div class="card">
+                <span class="date" id="date">09/01/2022</span>
+                <img src="./FamilyAlbum_files/familyDinner.jpg" alt="family-Dinner">
+                <h3>family Dinner</h3>
+                <p>Family trip to the nature reserve on Tuesday</p>
+            </div>
+
+            <div class="card">
+                <span class="date" id="date">05/02/2022</span>
+                <img src="./FamilyAlbum_files/family3.jpg" alt="family-Dinner">
+                <h3>family trip</h3>
+                <p>Family trip to the nature reserve on Tuesday</p>
+            </div>
+
+            <div class="card">
+                <span class="date" id="date">08/03/2022</span>
+                <img src="./FamilyAlbum_files/family2.jpg" alt="family-Dinner">
+                <h3>family Dinner</h3>
+                <p>Family trip to the nature reserve on Tuesday</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="hero-section">
+
+            <div class="container-right">
+                <h2>Fill in the following details</h2>
+                <form>    
+                    <div class="name-pic">
+                        <label for="name">Name your Pic</label>
+                        <input type="text" id="name" name="namePic" placeholder="For example: a family meal." required="">
+                    </div>
+                    <div class="name-date">
+                        <label for="nameDate">Date</label>
+                        <input type="date" id="nameDate" name="nameDate">
+                    </div>
+                    <div class="name-detail">
+                        <label for="detail">Image description:</label>
+                        <input type="text" id="detail" name="detail" required="">
+                    </div>
+                    <div class="name-submit">
+                        <label for="nameUpload">Put Url Photo Here</label>
+                        <input type="text" id="nameUpload" name="nameUpload" style="padding:5px; height:auto;">
+                        <button type="submit" class="btn-submit" id="btnSubmit">Upload now</button>
+
+                    </div>
+
+                </form>
+            </div>
+
+    </section>
+    <script src="./FamilyAlbum_files/jquery.min.js.download"></script>
+    <script src="./FamilyAlbum_files/script.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ==============Link cdn Font awesome================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!-- ==============Link Font Google================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- ==============Link Style css================= -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>FamilyAlbum</title>
+</head>
+
+<body>
+    <header>
+
+        <a href="index.html" class="logo"><i class="fas fa-draw-polygon"></i></a>
+
+        <div class="collapse">
+            <label for="checkbox"><i class="fas fa-bars"></i></label>
+        </div>
+
+        <nav>
+
+            <input type="checkbox" id="checkbox">
+            <ul class="navbar">
+                <li class="nav-list"><a href="" class="nav-link">Home</a></li>
+                <li class="nav-list"><a href="" class="nav-link">About</a></li>
+                <li class="nav-list"><a href="" class="nav-link">contact</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="social">
+                <li><a href="https://api.whatsapp.com/send?phone=9720526934140"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://www.facebook.com/Orekarako/"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/orel_karako/"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <section class="section-gallery">
+        <div class="background"></div>
+        <h1 class="titleGallery">My Beautiful Family</h1>
+        <div class="cards">
+            <div class="card">
+                <span class="date" id="date">2022-09-01</span>
+                <img src="./img/familyDinner.jpg" alt="family-Dinner">
+                <h3>family Dinner</h3>
+                <p>Family trip to the nature reserve on Tuesday</p>
+            </div>
+
+            <div class="card">
+                <span class="date" id="date">2022-05-02</span>
+                <img src="./img/family3.jpg" alt="family-Dinner">
+                <h3>family trip</h3>
+                <p>Family trip to the nature reserve on Tuesday</p>
+            </div>
+
+            <div class="card">
+                <span class="date" id="date">2022-08-03</span>
+                <img src="./img/family2.jpg" alt="family-Dinner">
+                <h3>family Dinner</h3>
+                <p>Family trip to the nature reserve on Tuesday</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="hero-section">
+
+            <div class="container-right">
+                <h2>Fill in the following details</h2>
+                <form >    
+                    <div class="name-pic">
+                        <label for="name">Name your Pic</label>
+                        <input type="text" id="name" name="namePic" placeholder="For example: a family Dinner." required>
+                    </div>
+                    <div class="name-date">
+                        <label for="nameDate">Date</label>
+                        <input type="date" id="nameDate" name="nameDate" >
+                    </div>
+                    <div class="name-detail">
+                        <label for="detail">Image description:</label>
+                        <input type="text" id="detail" name="detail" required>
+                    </div>
+                    <div class="name-submit">
+                        <label for="nameUpload">Put Url Photo Here</label>
+                        <input type="text" id="nameUpload" name="nameUpload" style="padding:5px; height:auto;">
+                        <button type="submit" class="btn-submit" id="btnSubmit">Upload now</button>
+
+                    </div>
+
+                </form>
+            </div>
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

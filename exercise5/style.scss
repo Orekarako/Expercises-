@@ -1,0 +1,380 @@
+// Root
+$main-color:rgba(0, 0, 0, 0.726);
+$logo-color:rgb(219, 29, 15);
+$hover-main-color:rgb(209, 33, 33);
+
+
+// Main
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+html {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+/////////////////////////// Header////////////////////////////
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 5px 15px;
+  background: linear-gradient(to right, #00000063, #a12ece59, #7f7fd5b6);
+
+
+  a.logo {
+    font-size: 1.5rem;
+
+    i {
+      color: $logo-color;
+    }
+
+  }
+
+  input {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    ul.navbar {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      li {
+        padding: 10px 30px;
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: $main-color;
+          text-transform: uppercase;
+          font-weight: 500;
+          transition: 0.4s ease all;
+
+          &:hover {
+            color: $hover-main-color;
+          }
+        }
+      }
+    }
+  }
+
+  ul.social {
+    display: flex;
+
+    li {
+      padding: 5px;
+      list-style: none;
+
+      i {
+        color: $main-color;
+        transition: all ease .2s;
+
+        &:hover {
+          color: $hover-main-color;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  div.collapse {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+
+  input:checked~ul.navbar {
+    display: block;
+
+  }
+
+  header {
+    display: block;
+    justify-content: space-evenly;
+
+    nav {
+
+
+      ul.navbar {
+        border-left: 1px solid $logo-color;
+        border-right: 1px solid $logo-color;
+        display: none;
+        margin: auto;
+
+        li {
+
+          position: relative;
+
+          ::before {
+            content: '';
+            width: 50%;
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $logo-color;
+            height: 2px;
+
+
+          }
+
+        }
+      }
+
+      ul.social {
+
+        margin: auto;
+      }
+    }
+
+    div.collapse {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: block;
+
+      i {
+        cursor: pointer;
+      }
+    }
+
+
+  }
+
+}
+
+/////////////////////////////////////////////////////////////
+
+
+////////////////////////// Section Gallery ////////////////////////////
+
+section.section-gallery {
+  width: 100vw;
+  display: flex;
+  padding-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #5f50a09a;
+  background-size: cover;
+  background-position: center;
+
+
+  
+  h1 {
+    font-size: 2rem;
+    margin: 20px;
+  }
+
+  .cards {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    overflow: visible;
+
+    .card {
+      box-shadow: 5px 5px 15px 5px #000000;
+      position: relative;
+      max-width: 300px;
+      max-height: 400px;
+      background-color: rgba(160, 95, 95, 0.589);
+      display: flex;
+      color: rgba(0, 0, 0, 0.788);
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      z-index: 33;
+      border-radius: 10px;
+      align-items: center;
+      padding-bottom: 25px;
+      transition: all ease-in-out 0.2s; 
+
+      &:hover {
+        transform: scale(1.05);
+              }
+
+        .date{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 80px;
+          height: 18px;
+          background-color: #000000a6;
+          z-index: 5;
+          position: absolute;
+          color: #fff;
+          font-size: 10px;
+        top: 10px;
+          left: 15px;
+          border-radius: 10px;
+        }
+      h3{
+        background-color: rgba(255, 255, 255, 0.384);
+        width: 100%;
+        font-size: 1rem;
+      }
+      img {
+
+        max-width: 150x;
+        max-height: 200px;
+      }
+
+      p {
+        margin-top: 15px;
+        width: 90%;
+        font-size: 0.8rem;
+      }
+
+
+    }
+  }
+
+}
+
+////////////////////////// Section One ////////////////////////////
+
+section.hero-section {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  min-height: 70vh;
+  background-color: #5f50a09a;
+}
+
+.container-right {
+  z-index: 9;
+  width: 350px;
+  background: linear-gradient(to right, #6ab8b29c, #2f3847a4 , #9f758a);
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+  h2 {
+    color: #363685;
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+
+  form {
+    display: block;
+
+    div {
+
+      label,
+      input {
+        display: block;
+        font-weight: 500;
+        padding: 5px 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 0.7rem;
+      }
+
+    }
+
+    .name-submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      input {
+        padding: 16px 24px;
+        width: 340px;
+        height: 50px;
+      }
+
+      button {
+        padding: 10px 40px;
+        margin-top: 10px;
+        border: 1px solid $main-color;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius: 10px;
+        color: $main-color;
+        font-size: 0.7rem;
+        background-color: rgba(255, 0, 0, 0.548);
+        // background-color: #8078f0c0;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: rgba(255, 0, 0, 0.5);
+        }
+
+        &:active {
+          background-color: rgba(255, 0, 0, 0.6);
+          transform: scale(1.01);
+        }
+      }
+    }
+  }
+
+
+
+
+@media screen and (max-width:1000px) {
+
+  html {
+    font-size: 18px;
+  }
+
+  .container {
+
+    display: flex;
+    flex-direction: column;
+
+
+    .container-right {
+      margin-top: 50px;
+      min-width: 350px;
+
+
+      form {
+        display: block;
+
+        div {
+
+          label,
+          input {
+            display: block;
+            font-weight: 500;
+            padding: 10px 30px;
+            width: 50%;
+            text-align: center;
+            font-size: 0.2rem;
+            margin: auto;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////
+/// 

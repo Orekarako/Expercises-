@@ -1,0 +1,281 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 5px 15px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3882352941), rgba(161, 46, 206, 0.3490196078), rgba(127, 127, 213, 0.7137254902));
+}
+header a.logo {
+  font-size: 1.5rem;
+}
+header a.logo i {
+  color: rgb(219, 29, 15);
+}
+header input {
+  display: none;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header nav ul.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header nav ul.navbar li {
+  padding: 10px 30px;
+  list-style: none;
+}
+header nav ul.navbar li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.726);
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.4s ease all;
+}
+header nav ul.navbar li a:hover {
+  color: rgb(209, 33, 33);
+}
+header ul.social {
+  display: flex;
+}
+header ul.social li {
+  padding: 5px;
+  list-style: none;
+}
+header ul.social li i {
+  color: rgba(0, 0, 0, 0.726);
+  transition: all ease 0.2s;
+}
+header ul.social li i:hover {
+  color: rgb(209, 33, 33);
+  transform: scale(1.2);
+}
+header div.collapse {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  input:checked ~ ul.navbar {
+    display: block;
+  }
+  header {
+    display: block;
+    justify-content: space-evenly;
+  }
+  header nav ul.navbar {
+    border-left: 1px solid rgb(219, 29, 15);
+    border-right: 1px solid rgb(219, 29, 15);
+    display: none;
+    margin: auto;
+  }
+  header nav ul.navbar li {
+    position: relative;
+  }
+  header nav ul.navbar li ::before {
+    content: "";
+    width: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(219, 29, 15);
+    height: 2px;
+  }
+  header nav ul.social {
+    margin: auto;
+  }
+  header div.collapse {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: block;
+  }
+  header div.collapse i {
+    cursor: pointer;
+  }
+}
+section.section-gallery {
+  width: 100vw;
+  display: flex;
+  padding-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(95, 80, 160, 0.6039215686);
+  background-size: cover;
+  background-position: center;
+}
+section.section-gallery h1 {
+  font-size: 2rem;
+  margin: 20px;
+}
+section.section-gallery .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  overflow: visible;
+}
+section.section-gallery .cards .card {
+  box-shadow: 5px 5px 15px 5px #000000;
+  position: relative;
+  max-width: 300px;
+  max-height: 400px;
+  background-color: rgba(160, 95, 95, 0.589);
+  display: flex;
+  color: rgba(0, 0, 0, 0.788);
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  z-index: 33;
+  border-radius: 10px;
+  align-items: center;
+  padding-bottom: 25px;
+  transition: all ease-in-out 0.2s;
+}
+section.section-gallery .cards .card:hover {
+  transform: scale(1.05);
+}
+section.section-gallery .cards .card .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80px;
+  height: 18px;
+  background-color: rgba(0, 0, 0, 0.6509803922);
+  z-index: 5;
+  position: absolute;
+  color: #fff;
+  font-size: 10px;
+  top: 10px;
+  left: 15px;
+  border-radius: 10px;
+}
+section.section-gallery .cards .card h3 {
+  background-color: rgba(255, 255, 255, 0.384);
+  width: 100%;
+  font-size: 1rem;
+}
+section.section-gallery .cards .card img {
+  max-width: 150x;
+  max-height: 200px;
+}
+section.section-gallery .cards .card p {
+  margin-top: 15px;
+  width: 90%;
+  font-size: 0.8rem;
+}
+
+section.hero-section {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  min-height: 70vh;
+  background-color: rgba(95, 80, 160, 0.6039215686);
+}
+
+.container-right {
+  z-index: 9;
+  width: 350px;
+  background: linear-gradient(to right, rgba(106, 184, 178, 0.6117647059), rgba(47, 56, 71, 0.6431372549), #9f758a);
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h2 {
+  color: #363685;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+form {
+  display: block;
+}
+form div label,
+form div input {
+  display: block;
+  font-weight: 500;
+  padding: 5px 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.7rem;
+}
+form .name-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+form .name-submit input {
+  padding: 16px 24px;
+  width: 340px;
+  height: 50px;
+}
+form .name-submit button {
+  padding: 10px 40px;
+  margin-top: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.726);
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0.726);
+  font-size: 0.7rem;
+  background-color: rgba(255, 0, 0, 0.548);
+  transition: all 0.3s ease;
+}
+form .name-submit button:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+form .name-submit button:active {
+  background-color: rgba(255, 0, 0, 0.6);
+  transform: scale(1.01);
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 18px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .container-right {
+    margin-top: 50px;
+    min-width: 350px;
+  }
+  .container .container-right form {
+    display: block;
+  }
+  .container .container-right form div label,
+.container .container-right form div input {
+    display: block;
+    font-weight: 500;
+    padding: 10px 30px;
+    width: 50%;
+    text-align: center;
+    font-size: 0.2rem;
+    margin: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
